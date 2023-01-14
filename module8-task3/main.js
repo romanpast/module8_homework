@@ -7,7 +7,7 @@ function useRequest(url, callback) {
     } else {
       const result = JSON.parse(xhr.response);
       console.log(xhr.response);
-      
+
       if (callback) {
         callback(result);
       }
@@ -34,6 +34,6 @@ btnNode.addEventListener('click', () => {
   if (limit >= 1 && limit <= 10) {
     useRequest(`https://picsum.photos/v2/list/?limit=${limit}`, displayResult);
   } else {
-    resultNode.innerHTML = "the number is outside the range from 1 to 10"
+    resultNode.innerHTML = "the number is outside of range from 1 to 10"
   }
 })
