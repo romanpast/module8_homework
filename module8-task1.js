@@ -20,7 +20,8 @@ const xmlString = `
 const parser = new DOMParser();
 const xmlDOM = parser.parseFromString(xmlString, "text/xml");
 const studentNode = xmlDOM.querySelectorAll("student");
-let nameNode = xmlDOM.querySelectorAll('name'), i;
+let nameNode = xmlDOM.querySelectorAll('name'),
+  i;
 let contentArray = []
 const parceXML = () => {
   for (i = 0; i < studentNode.length; ++i) {
@@ -46,10 +47,3 @@ let result = {
   list: contentArray
 }
 console.log(result)
-
-// {
-//   list: [
-//     { name: 'Ivan Ivanov', age: 35, prof: 'teacher', lang: 'en' },
-//     { name: 'Петр Петров', age: 58, prof: 'driver', lang: 'ru' },
-//   ]
-// }
