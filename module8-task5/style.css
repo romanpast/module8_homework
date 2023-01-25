@@ -52,3 +52,12 @@
     width: 400px;
     height: 50%;
   }
+
+  .warning {
+    color: red;
+    text-transform: uppercase;
+    background: #f2dede;
+    line-height: 50px;
+    margin: 30px auto;
+    width: 50vw;
+  }
