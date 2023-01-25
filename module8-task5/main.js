@@ -29,14 +29,14 @@ const cardMaker = (arr) => {
 
 if (localStorage.myData) {
     resultNode.innerHTML = "";
-    let contentArray = JSON.parse(localStorage.myData);
-    cardMaker(contentArray);
+    let currentArray = JSON.parse(localStorage.myData);
+    cardMaker(currentArray);
 }
 
 
 form.addEventListener("submit", function (e) {
-        const myData = localStorage.getItem('myData');
-
+        // const myData = localStorage.getItem('myData');
+    // if( contentArray)
         fetch("https://picsum.photos/v2/list?page=1&limit=10")
             .then((response) => {
                 console.log('response', response)
